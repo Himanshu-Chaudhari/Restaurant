@@ -1,0 +1,20 @@
+<button (pointerdown)="sayHello()">Hello</button>
+<div *ngFor="let employee of employees">
+    <div *ngIf="employee.name === 'Himanshu'">
+        <div>
+            Name : {{employee.name}}
+        </div>
+        <div>
+            Age : {{employee.age}}
+        </div> <br>
+    </div>
+    <div>
+        Name : {{employee.name}}
+    </div>
+    <div>
+        Age : {{employee.age}}
+    </div> <br>
+    <app-pop-up></app-pop-up>
+</div>
+
+    
