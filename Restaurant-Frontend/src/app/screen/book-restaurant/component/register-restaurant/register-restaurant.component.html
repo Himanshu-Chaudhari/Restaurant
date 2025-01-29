@@ -1,0 +1,52 @@
+
+<div class="outer">
+    <div class="form-container" >
+      <div style="font-weight: bold; font-size: larger;">Owner form</div>
+      <form [formGroup]="registerRestoGroup" >
+          <label for="restaurantName">Restaurant Name:</label>
+          <input required id="restaurantName" type="text" formControlName="restaurantName">
+
+          <label for="mobileNo">Restaurant Number:</label>
+          <input required id="mobileNo" type="number" min="1000000000" max="9999999999" formControlName="mobileNo">
+    
+          <label for="addressLine1">Address Line 1 </label>
+          <input required id="addressLine1" type="text" formControlName="addressLine1">
+
+          <label for="addressLine2">Address Line 1 </label>
+          <input id="addressLine2" type="text" formControlName="addressLine2">
+    
+          <label for="city">City</label>
+          <input required id="city" type="text" formControlName="city">
+    
+          <label for="state">State</label>
+          <input required id="state" type="text" formControlName="state">
+    
+          <label for="country">Country</label>
+          <input required id="country" type="text" formControlName="country">
+    
+          <label for="restroType">RestroType</label>
+          <input required id="restroType" type="text" formControlName="country">
+
+          <label for="countryCode">Country Code:</label>
+          <input required id="countryCode" type="text" formControlName="countryCode">
+    
+    
+          <label for="ownerEmail">Owner Email:</label>
+          <input required id="ownerEmail" type="email" formControlName="ownerEmail">
+    
+          <label for="governmentIdType">Government ID Type:</label>
+          <select id="governmentIdType" required formControlName="governmentIdType">
+              <option value="pancard">Pancard</option>
+              <option value="aadharcard">Aadhar Card</option>
+          </select>
+    
+          <label for="governmentId">Government ID:</label>
+          <input id="governmentId" type="text" formControlName="governmentId">
+    
+          <label for="password">Password:</label>
+          <input id="password" type="password" formControlName="password">
+    
+          <button type="submit">Submit</button>
+      </form>
+    </div>
+</div>

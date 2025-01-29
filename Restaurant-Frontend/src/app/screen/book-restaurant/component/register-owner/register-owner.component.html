@@ -1,0 +1,39 @@
+
+<div class="outer">
+<div class="form-container" >
+  <div style="font-weight: bold; font-size: larger;">Owner form</div>
+  <form [formGroup]="ownerEntryForm" (ngSubmit)="onSubmit()">
+      <label for="ownerFirstName">First Name:</label>
+      <input required id="ownerFirstName" type="text" formControlName="ownerFirstName">
+
+      <label for="ownerMiddleName">Middle Name:</label>
+      <input required id="ownerMiddleName" type="text" formControlName="ownerMiddleName">
+
+      <label for="ownerLastName">Last Name:</label>
+      <input required id="ownerLastName" type="text" formControlName="ownerLastName">
+
+      <label for="countryCode">Country Code:</label>
+      <input required id="countryCode" type="text" formControlName="countryCode">
+
+      <label for="ownerMobileNumber">Mobile Number:</label>
+      <input required id="ownerMobileNumber" type="number" min="1000000000" max="9999999999" formControlName="ownerMobileNumber">
+
+      <label for="ownerEmail">Owner Email:</label>
+      <input required id="ownerEmail" type="email" formControlName="ownerEmail">
+
+      <label for="governmentIdType">Government ID Type:</label>
+      <select id="governmentIdType" required formControlName="governmentIdType">
+          <option value="pancard">Pancard</option>
+          <option value="aadharcard">Aadhar Card</option>
+      </select>
+
+      <label for="governmentId">Government ID:</label>
+      <input id="governmentId" type="text" formControlName="governmentId">
+
+      <label for="password">Password:</label>
+      <input id="password" type="password" formControlName="password">
+
+      <button type="submit">Submit</button>
+  </form>
+</div>
+</div>

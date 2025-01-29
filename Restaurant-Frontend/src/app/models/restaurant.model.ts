@@ -14,5 +14,5 @@ export interface Restaurant {
     openingHour: string;
     clossingHour: string;
     logo?: string;
-  }
+}
   

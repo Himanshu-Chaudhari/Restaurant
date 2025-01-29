@@ -1,21 +1,19 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { FooterComponent } from './component/footer/footer.component';
-import { FormComponent } from './component/form/form.component';
-
+import { RegisterOwnerComponent } from './component/register-owner/register-owner.component';
+import { RegisterRestaurantComponent } from './component/register-restaurant/register-restaurant.component';
 const routes: Routes = [
   {
-    path : 'footer',
-    component : FooterComponent
-  },
-  {
-    path : 'form',
-    component : FormComponent
+    path : 'registerOwner',
+    component : RegisterOwnerComponent
+  },{
+    path : 'registerRestaurant',
+    component : RegisterRestaurantComponent
   }
 ];
-
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
+
 export class BookRestaurantRoutingModule { }

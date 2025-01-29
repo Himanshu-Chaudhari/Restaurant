@@ -1,19 +1,21 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BookRestaurantRoutingModule } from './book-restaurant-routing.module';
-import { FormComponent } from './component/form/form.component';
-import { FooterComponent } from './component/footer/footer.component';
-import { SharedModule } from 'src/app/shared/shared.module';
+import { RegisterOwnerComponent } from './component/register-owner/register-owner.component';
+import { RegisterRestaurantComponent } from './component/register-restaurant/register-restaurant.component';
+import { SharedModule } from '../../shared/shared.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
-    FormComponent,
-    FooterComponent,
+    RegisterOwnerComponent,
+    RegisterRestaurantComponent,
   ],
   imports: [
     CommonModule,
     BookRestaurantRoutingModule,
-    SharedModule
+    SharedModule,
+    ReactiveFormsModule
   ]
 })
 export class BookRestaurantModule { }
