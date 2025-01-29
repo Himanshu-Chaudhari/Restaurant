@@ -24,4 +24,10 @@ export class RegisterRestaurantComponent {
     clossingHour : new FormControl() ,
     logo : new FormControl() 
   });
+
+  onSubmit(){
+    console.log(this.registerRestoGroup
+      .valid
+    )
+  }
 }
