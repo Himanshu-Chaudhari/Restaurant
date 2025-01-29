@@ -3,16 +3,17 @@ import { CommonModule } from '@angular/common';
 import { BookRestaurantRoutingModule } from './book-restaurant-routing.module';
 import { FormComponent } from './component/form/form.component';
 import { FooterComponent } from './component/footer/footer.component';
-import { PopUpComponent } from 'src/app/components/pop-up/pop-up.component';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 @NgModule({
   declarations: [
     FormComponent,
-    FooterComponent
+    FooterComponent,
   ],
   imports: [
     CommonModule,
     BookRestaurantRoutingModule,
+    SharedModule
   ]
 })
 export class BookRestaurantModule { }

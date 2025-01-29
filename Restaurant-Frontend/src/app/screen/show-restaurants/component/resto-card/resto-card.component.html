@@ -1,0 +1,15 @@
+<div class="layoutOuter">
+    <div *ngFor="let restaurant of Restaurants">
+        <div class="cardOut">
+            <img class="image" [src]="restaurant.logo" alt="Restaurant Logo">
+            <div>Name: {{restaurant.restaurantName}}</div>
+            <div>Mobile No: {{restaurant.mobileNo}}</div>
+            <div>City: {{restaurant.city}}</div>
+            <div>Country: {{restaurant.country}}</div>
+            <div>Restro Type: {{restaurant.restroType}}</div>
+            <div>Speciality: {{restaurant.speciality}}</div>
+            <div>Opening Hour: {{restaurant.openingHour}}</div>
+            <div>Closing Hour: {{restaurant.clossingHour}}</div>
+        </div>
+    </div>
+</div>
