@@ -3,10 +3,10 @@
         <div style="font-weight: bold; font-size: larger;">Owner form</div>
         <form [formGroup]="registerRestoGroup" (ngSubmit)="onSubmit()">
             <label for="restaurantName">Restaurant Name:</label>
-            <input required id="restaurantName" type="text" formControlName="restaurantName">
+            <input required id="restaurantName" formControlName="restaurantName">
 
             <label for="mobileNo">Restaurant Number:</label>
-            <input required id="mobileNo" type="number" min="1000000000" max="9999999999" formControlName="mobileNo">
+            <input required id="mobileNo" type="number" formControlName="mobileNo">
 
             <label for="addressLine1">Address Line 1 </label>
             <input required id="addressLine1" type="text" formControlName="addressLine1">
