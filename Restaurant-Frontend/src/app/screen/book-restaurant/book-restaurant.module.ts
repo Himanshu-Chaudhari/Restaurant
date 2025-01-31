@@ -5,6 +5,7 @@ import { RegisterOwnerComponent } from './component/register-owner/register-owne
 import { RegisterRestaurantComponent } from './component/register-restaurant/register-restaurant.component';
 import { SharedModule } from '../../shared/shared.module';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     CommonModule,
     BookRestaurantRoutingModule,
     SharedModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ]
 })
 export class BookRestaurantModule { }

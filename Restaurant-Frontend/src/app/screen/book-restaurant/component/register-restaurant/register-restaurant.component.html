@@ -1,7 +1,7 @@
 <div class="outer">
     <div class="form-container">
         <div style="font-weight: bold; font-size: larger;">Owner form</div>
-        <form [formGroup]="registerRestoGroup" (ngSubmit)="onSubmit()">
+        <form [formGroup]="restaurantDetails" (ngSubmit)="captureDetails()">
             <label for="restaurantName">Restaurant Name:</label>
             <input required id="restaurantName" formControlName="restaurantName">
 
@@ -37,6 +37,16 @@
 
             <label for="clossingHour">Clossing Hour</label>
             <input id="clossingHour" required type="text" formControlName="clossingHour">
+
+            <label for="foodLicense">Food License</label>
+            <input required id="foodLicense" type="text" formControlName="foodLicense">
+
+            <label for="serviceType">Service Type</label>
+            <input required id="serviceType" type="text" formControlName="serviceType">
+
+            <label for="speciality">Speciality</label>
+            <input required id="speciality" type="text" formControlName="speciality">
+
             
             <label for="logo">Logo</label>
             <input id="logo" type="text" formControlName="logo">

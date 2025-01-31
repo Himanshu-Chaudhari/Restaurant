@@ -4,34 +4,34 @@
   <div style="font-weight: bold; font-size: larger;">Owner form</div>
   <form [formGroup]="ownerEntryForm" (ngSubmit)="onSubmit()">
       <label for="ownerFirstName">First Name:</label>
-      <input required id="ownerFirstName" type="text" formControlName="ownerFirstName">
+      <input required id="ownerFirstName" type="text" [formControl]="ownerEntryForm.controls.onwnerFirstName">
 
       <label for="ownerMiddleName">Middle Name:</label>
-      <input required id="ownerMiddleName" type="text" formControlName="ownerMiddleName">
+      <input required id="ownerMiddleName" type="text" [formControl]="ownerEntryForm.controls.ownerMiddleName">
 
       <label for="ownerLastName">Last Name:</label>
-      <input required id="ownerLastName" type="text" formControlName="ownerLastName">
+      <input required id="ownerLastName" type="text" [formControl]="ownerEntryForm.controls.ownerLastName">
 
       <label for="countryCode">Country Code:</label>
-      <input required id="countryCode" type="text" formControlName="countryCode">
+      <input required id="countryCode" type="text" [formControl]="ownerEntryForm.controls.countryCode">
 
       <label for="ownerMobileNumber">Mobile Number:</label>
-      <input required id="ownerMobileNumber" type="number" min="1000000000" max="9999999999" formControlName="ownerMobileNumber">
+      <input required id="ownerMobileNumber" type="number" min="1000000000" max="9999999999" [formControl]="ownerEntryForm.controls.ownerMobileNumber">
 
       <label for="ownerEmail">Owner Email:</label>
-      <input required id="ownerEmail" type="email" formControlName="ownerEmail">
+      <input required id="ownerEmail" type="email" [formControl]="ownerEntryForm.controls.ownerEmail">
 
       <label for="governmentIdType">Government ID Type:</label>
-      <select id="governmentIdType" required formControlName="governmentIdType">
+      <select id="governmentIdType" required [formControl]="ownerEntryForm.controls.governmentIdType">
           <option value="pancard">Pancard</option>
           <option value="aadharcard">Aadhar Card</option>
       </select>
 
       <label for="governmentId">Government ID:</label>
-      <input id="governmentId" type="text" formControlName="governmentId">
+      <input id="governmentId" type="text" [formControl]="ownerEntryForm.controls.governmentId">
 
       <label for="password">Password:</label>
-      <input id="password" type="password" formControlName="password">
+      <input id="password" type="password" [formControl]="ownerEntryForm.controls.password">
 
       <button type="submit">Submit</button>
   </form>

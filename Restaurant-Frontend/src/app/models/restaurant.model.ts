@@ -15,4 +15,22 @@ export interface Restaurant {
     clossingHour: string;
     logo?: string;
 }
+
+export class RestaurantRequest {
+    restaurantName = "";
+    mobileNo = "";
+    addressLine1 = "";
+    addressLine2 = "";
+    city = "";
+    state = "";
+    country = "";
+    restroType = "";
+    speciality = "";
+    foodLicense = "";
+    serviceType = "";
+    openingHour = "";
+    clossingHour = "";
+    logo = "";
+}
+  
   
