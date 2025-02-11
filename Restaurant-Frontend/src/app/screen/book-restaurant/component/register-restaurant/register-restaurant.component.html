@@ -1,17 +1,20 @@
 <div class="outer">
     <div class="form-container">
-        <div style="font-weight: bold; font-size: larger;">Owner form</div>
+        <div style="font-weight: bold; font-size: larger;">Restaurant form</div>
         <form [formGroup]="restaurantDetails" (ngSubmit)="captureDetails()">
             <label for="restaurantName">Restaurant Name:</label>
             <input required id="restaurantName" formControlName="restaurantName">
 
-            <label for="mobileNo">Restaurant Number:</label>
+            <label for="mobileNo">Restaurant Mobile Number:</label>
             <input required id="mobileNo" type="number" formControlName="mobileNo">
+
+            <label for="email">Email:</label>
+            <input required id="email" type="email" formControlName="email">
 
             <label for="addressLine1">Address Line 1 </label>
             <input required id="addressLine1" type="text" formControlName="addressLine1">
 
-            <label for="addressLine2">Address Line 1 </label>
+            <label for="addressLine2">Address Line 2 </label>
             <input id="addressLine2" type="text" formControlName="addressLine2">
 
             <label for="city">City</label>
@@ -22,6 +25,9 @@
 
             <label for="country">Country</label>
             <input required id="country" type="text" formControlName="country">
+
+            <label for="pincode">Pincode</label>
+            <input required id="pincode" maxlength="6" type="text" formControlName="pincode">
 
             <label for="restroType">Veg / Non Veg</label>
             <select id="restroType" required formControlName="restroType">
@@ -43,10 +49,6 @@
 
             <label for="serviceType">Service Type</label>
             <input required id="serviceType" type="text" formControlName="serviceType">
-
-            <label for="speciality">Speciality</label>
-            <input required id="speciality" type="text" formControlName="speciality">
-
             
             <label for="logo">Logo</label>
             <input id="logo" type="text" formControlName="logo">

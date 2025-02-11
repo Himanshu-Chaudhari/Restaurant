@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
+import { CardComponent } from '../components/card/card.component';
 import { CommonModule } from '@angular/common';
-import { SharedRoutingModule } from './shared-routing.module';
-import { PopUpComponent } from '../components/pop-up/pop-up.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [PopUpComponent ],
-  imports:[CommonModule,SharedRoutingModule],
-  exports:[PopUpComponent ]
+  declarations: [ CardComponent],
+  imports:[CommonModule , FormsModule],
+  exports:[ CardComponent ]
 })
 export class SharedModule { }

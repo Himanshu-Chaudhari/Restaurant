@@ -4,8 +4,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BookRestaurantModule } from './screen/book-restaurant/book-restaurant.module';
 import { ShowRestaurantsModule } from './screen/show-restaurants/show-restaurants.module';
-import { SharedModule } from './shared/shared.module';
 import { ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -16,8 +16,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     AppRoutingModule,
     BookRestaurantModule,
     ShowRestaurantsModule,
-    SharedModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

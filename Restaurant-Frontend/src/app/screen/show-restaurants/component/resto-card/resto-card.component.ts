@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import { Restaurant } from '../../../../models/restaurant.model';
+import { Component, Input } from '@angular/core';
+import { GetRestaurantsService } from '../../services/get-restaurants.service';
+import { RestaurantRequest, RestaurantResponse } from 'src/app/models/restaurant.model';
 
 @Component({
   selector: 'app-resto-card',
@@ -9,51 +10,34 @@ import { Restaurant } from '../../../../models/restaurant.model';
 
 export class RestoCardComponent {
 
-  // Form Group
-  // Form Control
-  // Form Builder
+  @Input() hide : number = -1;
+  constructor(private getResto : GetRestaurantsService ){
+    this.toggleRestaurants();
+  }
   
-    Restaurants : Restaurant[]=[{
-        restaurantName : "Kanha",
-        mobileNo : "0000000000",
-        addressLine1 : "Iskcon Chowk Kondwa",
-        city : "Pune",
-        state : "Maharashtra",
-        country : "India",
-        restroType : "veg" ,
-        speciality : "Nothing",
-        foodLicense : "Not Approved",
-        serviceType : "Very Bad",
-        openingHour : "12:00 pm",
-        clossingHour : "11:00 pm",
-        logo : 'https://lh3.googleusercontent.com/p/AF1QipMfPjyCNvE5cU-7X45InJZOI6ewDwe8E1DdmrN8=s1360-w1360-h1020'
-      },{
-        restaurantName : "Gokul",
-        mobileNo : '0000000000',
-        addressLine1 : "Infront of Gokul Nagar",
-        city : "Pune",
-        state : "Maharashtra",
-        country : "India",
-        restroType : "veg" ,
-        speciality : "Nothing",
-        foodLicense : "Not Approved",
-        serviceType : "Very Bad",
-        openingHour : "12:00 pm",
-        clossingHour : "11:00 pm"
-      },
-      {
-        restaurantName : "Gokul",
-        mobileNo : "0000000000",
-        addressLine1 : "Infront of Gokul Nagar",
-        city : "Pune",
-        state : "Maharashtra",
-        country : "India",
-        restroType : "veg" ,
-        speciality : "Nothing",
-        foodLicense : "Not Approved",
-        serviceType : "Very Bad",
-        openingHour : "12:00 pm",
-        clossingHour : "11:00 pm"
-      },
-    ]
+  Restaurants : RestaurantResponse[]=[]
+
+  buttonText = "Show Restaurants";
+  showRestaurant = false;
+
+  toggleRestaurants() {
+    this.showRestaurant = !this.showRestaurant;
+    this.buttonText = this.showRestaurant ? "Hide Restaurants" : "Show Restaurants";
+    if (this.showRestaurant) {
+      this.getResto.getRestaurants().subscribe({
+        next: (restaurants) => {
+          console.log(restaurants);
+          this.Restaurants = restaurants;
+        },
+        error: (err) => console.error(err),
+      });
+    }else{
+      this.Restaurants = [];
+    }
+    console.log(this.Restaurants);
+  }
+
+  handleHideRestaurant(index: number) {
+    this.Restaurants.splice(index, 1); 
+  }
 }

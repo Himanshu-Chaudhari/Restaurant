@@ -4,10 +4,14 @@ import { RegisterOwnerComponent } from './component/register-owner/register-owne
 import { RegisterRestaurantComponent } from './component/register-restaurant/register-restaurant.component';
 const routes: Routes = [
   {
-    path : 'registerOwner',
+    path : '',
+    component : RegisterRestaurantComponent
+  },
+  {
+    path : 'owner',
     component : RegisterOwnerComponent
   },{
-    path : 'registerRestaurant',
+    path : 'restaurant',
     component : RegisterRestaurantComponent
   }
 ];

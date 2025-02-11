@@ -1,24 +1,31 @@
-
-export interface RestaurantOwner{
-    ownerFirstName : string,
-    OwnerMiddleName : string,
-    ownerLastName : string,
-    countryCode : string,
-    ownerMobileNumber : string,
-    ownerEmail : string,
-    governmentIdType : "pancard" | "aadharcard"
-    governmentId : string
-    password :string 
-}
+type GovernmentIdType = "panCard" | "adharCard";
 export class RestaurantOwnerClass{
-    ownerFirstName = ""
-    OwnerMiddleName = ""
-    ownerLastName = ""
-    countryCode = 0
-    ownerMobileNumber = 0
-    ownerEmail = ""
-    governmentIdType = ""
-    governmentId = ""
-    password = "" 
+    firstName: string = "";
+    secondName: string = "";
+    lastName: string = "";
+    countryCode: string = "";
+    mobileNo: string = "";
+    email: string = "";
+    governmentIdType: GovernmentIdType = "adharCard";
+    governmentId: string = "";
+    password: string = "";
+}
+
+export class RestaurantOwnerResponse{
+    ownerId : Number = 0;
+    firstName: string = "";
+    secondName: string = "";
+    lastName: string = "";
+    countryCode: string = "";
+    mobileNo: string = "";
+    email: string = "";
+    governmentIdType: GovernmentIdType = "adharCard";
+    governmentId: string = "";
+    password: string = "";
+}
+
+export class relationshipResponse{
+    restaurantOwnerId : Number = 0;
+    restaurantId :  Number = 0;
 }
   

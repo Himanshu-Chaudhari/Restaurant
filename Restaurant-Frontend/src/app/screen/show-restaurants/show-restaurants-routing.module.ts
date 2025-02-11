@@ -4,7 +4,7 @@ import { RestoCardComponent } from './component/resto-card/resto-card.component'
 
 const routes: Routes = [
   {
-    path : 'card',
+    path : '',
     component : RestoCardComponent
   }
 ];

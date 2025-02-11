@@ -6,21 +6,7 @@
     justify-content: center;
 }
 
-.cardOut {
-    width: 100%;
-    border: 3px solid black;
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    border-radius: 10px;
+.btn{
+    margin-left: 45vw;
+    padding: 8px;
 }
-
-.image {
-    width: 100%;
-    max-width: 200px;
-    min-height: 200px;
-    height: auto;
-    border-radius: 5px;
-    margin-bottom: 10px;
-}
-
