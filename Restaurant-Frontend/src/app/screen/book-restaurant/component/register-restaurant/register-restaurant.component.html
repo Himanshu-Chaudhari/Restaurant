@@ -1,0 +1,59 @@
+<div class="outer">
+    <div class="form-container">
+        <div style="font-weight: bold; font-size: larger;">Restaurant form</div>
+        <form [formGroup]="restaurantDetails" (ngSubmit)="captureDetails()">
+            <label for="restaurantName">Restaurant Name:</label>
+            <input required id="restaurantName" formControlName="restaurantName">
+
+            <label for="mobileNo">Restaurant Mobile Number:</label>
+            <input required id="mobileNo" type="number" formControlName="mobileNo">
+
+            <label for="email">Email:</label>
+            <input required id="email" type="email" formControlName="email">
+
+            <label for="addressLine1">Address Line 1 </label>
+            <input required id="addressLine1" type="text" formControlName="addressLine1">
+
+            <label for="addressLine2">Address Line 2 </label>
+            <input id="addressLine2" type="text" formControlName="addressLine2">
+
+            <label for="city">City</label>
+            <input required id="city" type="text" formControlName="city">
+
+            <label for="state">State</label>
+            <input required id="state" type="text" formControlName="state">
+
+            <label for="country">Country</label>
+            <input required id="country" type="text" formControlName="country">
+
+            <label for="pincode">Pincode</label>
+            <input required id="pincode" maxlength="6" type="text" formControlName="pincode">
+
+            <label for="restroType">Veg / Non Veg</label>
+            <select id="restroType" required formControlName="restroType">
+                <option value="veg">Veg</option>
+                <option value="nonVeg">Non Veg</option>
+            </select>
+
+            <label for="speciality">Speciality</label>
+            <input required id="speciality" type="text" formControlName="speciality">
+
+            <label for="openingHour">Opening Hour  </label>
+            <input id="openingHour" type="openingHour" formControlName="openingHour">
+
+            <label for="clossingHour">Clossing Hour</label>
+            <input id="clossingHour" required type="text" formControlName="clossingHour">
+
+            <label for="foodLicense">Food License</label>
+            <input required id="foodLicense" type="text" formControlName="foodLicense">
+
+            <label for="serviceType">Service Type</label>
+            <input required id="serviceType" type="text" formControlName="serviceType">
+            
+            <label for="logo">Logo</label>
+            <input id="logo" type="text" formControlName="logo">
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>
