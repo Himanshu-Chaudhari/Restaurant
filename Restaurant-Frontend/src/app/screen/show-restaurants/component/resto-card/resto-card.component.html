@@ -1,0 +1,7 @@
+<div class="layoutOuter">
+    <div *ngFor="let restaurant of Restaurants; let index = index">
+        <app-card [restaurant]="restaurant" [index]="index" 
+        (hideRestaurant)="handleHideRestaurant($event)" ></app-card>
+    </div>
+</div>
+<button id="btn" class="btn" (click)="toggleRestaurants()"> {{buttonText}}</button>

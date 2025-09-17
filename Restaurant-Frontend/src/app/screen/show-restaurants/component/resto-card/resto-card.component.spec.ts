@@ -1,15 +1,15 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { FooterComponent } from './footer.component';
+import { RestoCardComponent } from './resto-card.component';
 
-describe('FooterComponent', () => {
-  let component: FooterComponent;
-  let fixture: ComponentFixture<FooterComponent>;
+describe('RestoCardComponent', () => {
+  let component: RestoCardComponent;
+  let fixture: ComponentFixture<RestoCardComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [FooterComponent]
+      declarations: [RestoCardComponent]
     });
-    fixture = TestBed.createComponent(FooterComponent);
+    fixture = TestBed.createComponent(RestoCardComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

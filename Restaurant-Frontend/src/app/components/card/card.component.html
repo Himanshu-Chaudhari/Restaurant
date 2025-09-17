@@ -1,0 +1,24 @@
+<div id="card" class="cardOut">
+    <img class="image" [src]="restaurant.logo" alt="Restaurant Logo">
+    <div>Name: {{ restaurant.restaurantName }}</div>
+    <div>Mobile No: {{ restaurant.mobileNo }}</div>
+    <div>City: {{ restaurant.city }}</div>
+    <div>Country: {{ restaurant.country }}</div>
+    <div>Restro Type: {{ restaurant.restroType }}</div>
+    <div>Speciality: {{ restaurant.speciality }}</div>
+    <div>Opening Hour: {{ restaurant.openingHour }}</div>
+    <div>Closing Hour: {{ restaurant.clossingHour }}</div>
+    <span>
+      <button (click)="sendHideRequest()">Hide</button>
+    </span>
+    <span>
+      <button (click)="addNewOwnerToRestaurant()">Add Owner</button>
+      <select style="margin-left: 10px;" [(ngModel)]="selectedOwner" required>
+        <option selected disabled>Select</option>
+        <option *ngFor="let owner of owners" [value]="owner.ownerId">
+          {{ owner.firstName }}
+        </option>
+      </select>      
+    </span>
+</div>
+  

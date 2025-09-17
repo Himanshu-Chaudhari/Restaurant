@@ -1,9 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [
+const routes: Routes = [{
+    path : "",
+    loadChildren : () => import('./screen/dashboard/dashboard.module').then((module)=>module.DashboardModule)
+  },
   {
-    path : "bookRestaurant",
+    path : "add",
     loadChildren : () => import('./screen/book-restaurant/book-restaurant.module').then((module)=>module.BookRestaurantModule)
   },{
     path : "showRestaurant",
@@ -15,4 +18,5 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
+
 export class AppRoutingModule { }

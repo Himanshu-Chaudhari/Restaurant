@@ -1,0 +1,28 @@
+
+.cardOut {
+    width: 100%;
+    border: 3px solid black;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 45vh;
+}
+
+.image {
+    width: 100%;
+    max-width: 200px;
+    min-height: 200px;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.notVisible{
+    visibility: hidden;
+}
+
+button{
+    padding: 7px;
+}
+
